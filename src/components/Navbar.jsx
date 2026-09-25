@@ -1,11 +1,14 @@
 "use client";
 
+import { usePlan } from "@/context/PlanContext";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
 const Navbar = () => {
   const pathname = usePathname();
+
+  const { plan, saved } = usePlan();
 
   const links = [
     { name: "Workouts", href: "/" },
@@ -97,12 +100,19 @@ const Navbar = () => {
         <div className="navbar-end gap-2">
           <Link
             href="/my-plan"
-            className="badge bg-[#ccff00] text-black border-none font-semibold"
+            className="flex items-center gap-2 text-sm font-semibold"
           >
-            Plan 0
+            Plan
+            <span className="badge bg-[#ccff00] text-black border-none">
+              {plan.length}
+            </span>
           </Link>
-          <Link href="/my-plan" className="badge badge-outline text-white">
-            Saved 0
+          <Link
+            href="/my-plan"
+            className="flex items-center gap-2 text-sm font-semibold"
+          >
+            Saved
+            <span className="badge badge-outline">{saved.length}</span>
           </Link>
         </div>
       </div>

@@ -1,3 +1,4 @@
+import WorkoutActions from "@/components/WorkoutActions";
 import { getWorkoutsById } from "@/library/Workouts";
 import Image from "next/image";
 import { notFound } from "next/navigation";
@@ -83,6 +84,7 @@ const WorkoutDetails = async ({ params }) => {
               <li key={index}>{step}</li>
             ))}
           </ol>
+          <WorkoutActions workout={workout} />
         </div>
       </div>
     </section>
