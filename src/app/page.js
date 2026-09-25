@@ -1,11 +1,7 @@
-import { getWorkouts, getWorkoutsById } from "@/library/Workouts";
+import {getWorkouts} from "@/library/Workouts";
 
 const Home = async () => {
   const workouts = await getWorkouts();
-  const singleWorkout = await getWorkoutsById(1);
-
-  console.log(workouts);
-  console.log(singleWorkout);
 
   return (
     <div>
