@@ -1,3 +1,8 @@
 @import "tailwindcss";
 @plugin "daisyui";
 
+
+@theme inline {
+  --font-display: var(--font-oswald);
+  --font-sans: var(--font-geist-sans);
+}

@@ -14,7 +14,7 @@ const Navbar = () => {
 
   return (
     <div className="bg-neutral-950 border-b border-neutral-800">
-      <div className="navbar max-w-6xl mx-auto px-6">
+      <div className="navbar max-w-6xl mx-auto px-4">
         {/* Left side: mobile hamburger dropdown + logo */}
         <div className="navbar-start gap-2">
           {/* Mobile dropdown menu — only visible below the lg breakpoint */}
@@ -64,7 +64,7 @@ const Navbar = () => {
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2">
             <Image src="/logo.png" alt="FitLog logo" width={28} height={28} />
-            <span className="text-xl font-bold tracking-wide text-white">
+            <span className="font-display text-xl font-bold tracking-wide text-white">
               FITLOG
             </span>
           </Link>
