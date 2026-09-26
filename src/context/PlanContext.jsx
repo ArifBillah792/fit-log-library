@@ -53,7 +53,16 @@ export const PlanProvider = ({ children }) => {
     toast.success("Lift done — nice work!");
   };
 
-  const value = { plan, saved, addToPlan, saveForLater };
+  const value = {
+    plan,
+    saved,
+    done,
+    addToPlan,
+    saveForLater,
+    removeFromPlan,
+    removeFromSaved,
+    markAsDone,
+  };
 
   return <PlanContext.Provider value={value}>{children}</PlanContext.Provider>;
 };

@@ -38,7 +38,17 @@ export default function RootLayout({ children }) {
           <main className="flex-1">{children}</main>
           <Footer />
 
-          <Toaster />
+          <Toaster
+            position="top-center"
+            toastOptions={{
+              style: {
+                background: "#171717",
+                color: "#fff",
+                border: "1px solid #262626",
+              },
+              success: { iconTheme: { primary: "#ccff00", secondary: "#000" } },
+            }}
+          />
         </PlanProvider>
       </body>
     </html>
